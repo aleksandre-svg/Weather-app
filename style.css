@@ -3,7 +3,7 @@
     margin: 40px auto;
     padding: 20px;
     border-radius: 20px;
-    background: linear-gradient(135deg, #74ebd5, #9face6);
+    background: linear-gradient(210deg, #94eb74, #e69f9f);
     color: #fff;
     font-family: 'Segoe UI', sans-serif;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -40,6 +40,8 @@
     display: flex;
     gap: 5px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .weather-info {

@@ -9,9 +9,8 @@ async function fetchData(city) {
     let humidity = card.querySelector("#humidity")
     let wind = card.querySelector("#wind")
 
-    
     try {
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=f7ec7cdf674942bfa9b213101251507 &q=${city.toLowerCase()}&aqi=yes`)
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=f7ec7cdf674942bfa9b213101251507 &q=${city.toLowerCase()}&aqi=yes`)
         
         
         if (!response.ok){
@@ -22,6 +21,7 @@ async function fetchData(city) {
         console.log(data)
         card.style.display = "flex"
         cityName.textContent = data.location.name
+        console.log(data.current.condition.icon)
         weatherIcon.src = data.current.condition.icon
         weatherTemp.textContent = `${data.current.temp_c}°C`
         description.textContent = `${data.current.condition.text} sky`
